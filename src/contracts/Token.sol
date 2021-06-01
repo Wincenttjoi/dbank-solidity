@@ -12,7 +12,7 @@ contract Token is ERC20 {
         minter = msg.sender;
     }
 
-    function passMinterRole(address dBank) public returns (Bool) {
+    function passMinterRole(address dBank) public returns (bool) {
         require(msg.sender == minter);
         minter = dBank;
 
